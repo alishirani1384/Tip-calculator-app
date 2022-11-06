@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  font-family: "Space Mono", monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--Light-grayish-cyan);
+  gap: 4rem;
+}
+.title {
+  color: var(--Very-dark-cyan);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.card {
+  background-color: var(--White);
+  width: 700px;
+  border-radius: 1rem;
+}
+.card-container {
+  display: flex;
+
+  padding: 2rem;
+  gap: 2rem;
+}
+.inputs-section,
+.outputs-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.outputs-section {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.bill-sec,
+.tip-sec,
+.people-sec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.inputs-section {
+  gap: 2rem;
+}
+label {
+  color: var(--Very-dark-cyan);
+  font-size: 14px;
+}
+.bill-input,
+.people-input {
+  position: relative;
+}
+.bill-input input,
+.people-input input {
+  width: 100%;
+  text-align: right;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--Very-dark-cyan);
+  background-color: var(--Very-light-grayish-cyan);
+  outline-color: var(--Strong-cyan);
+}
+.bill-input img,
+.people-input img {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+.tip-btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.tip-btns button {
+  width: 90px;
+  color: var(--White);
+  background-color: var(--Very-dark-cyan);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 7px;
+  font-size: 1.1rem;
+}
+.tip-btns button:hover {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+.selected {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+.tip-btns input {
+  width: 90px;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--Very-light-grayish-cyan);
+  border-radius: 7px;
+  outline-color: var(--Strong-cyan);
+}
+.outputs-section {
+  gap: 2rem;
+}
+.tip-amount,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tip-amount h2,
+.total h2 {
+  color: var(--Strong-cyan);
+  font-size: 2rem;
+}
+.tip-amount p,
+.total p {
+  color: white;
+}
+.tip-amount span,
+.total span {
+  font-size: 12px;
+  color: var(--Grayish-cyan);
+}
+.reset-btn {
+  margin-top: auto;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  background-color: var(--Strong-cyan);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--Very-dark-cyan);
+  opacity: 40%;
+}
+.reset-btn:hover {
+  opacity: 100%;
+}
+@media screen and (max-width: 750px) {
+  body {
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    gap: 0;
+  }
+  .inputs-section,
+  .outputs-section {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    margin-top: auto;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tip-btns {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .tip-btns div button {
+    width: 130px;
+  }
+  .tip-btns input {
+    width: 130px;
+  }
+  .tip-btns div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
