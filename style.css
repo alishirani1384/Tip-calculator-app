@@ -107,8 +107,8 @@ label {
   color: var(--Very-dark-cyan);
 }
 .selected {
-  background-color: var(--Strong-cyan);
-  color: var(--Very-dark-cyan);
+  background-color: var(--Strong-cyan) !important;
+  color: var(--Very-dark-cyan) !important;
 }
 .tip-btns input {
   width: 90px;
